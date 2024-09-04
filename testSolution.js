@@ -4,6 +4,7 @@ import {
   lastCarInInventory,
   sortCarsByModel,
   getAllCarYears,
+  getCarYearsOldersThan2000,
 } from "./solution.js";
 
 // # Problem 1
@@ -40,3 +41,13 @@ console.log(years);
 // console.log(getAllCarYears([]));
 // console.log(getAllCarYears([{}]));
 // console.log(getAllCarYears([{}, { car_make: "BMW" }, { id: 10 }]));
+
+// # Problem 5
+const ans = getCarYearsOldersThan2000(years);
+console.log(ans);
+
+// console.log(getCarYearsOldersThan2000());
+// console.log(getCarYearsOldersThan2000([]));
+// console.log(getCarYearsOldersThan2000(["Hi"]));
+// console.log(getCarYearsOldersThan2000([1990]));
+// console.log(getCarYearsOldersThan2000([undefined, null]));
