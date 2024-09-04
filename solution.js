@@ -44,7 +44,7 @@ export function lastCarInInventory(inventory) {
 
 export function sortCarsByModel(inventory) {
   if (!inventory || !Array.isArray(inventory)) {
-    return "Invalid argument";
+    return [];
   }
   inventory.sort((a, b) => {
     if (!a.car_model || !b.car_model) {
@@ -64,7 +64,7 @@ export function sortCarsByModel(inventory) {
 
 export function getAllCarYears(inventory) {
   if (!inventory || !Array.isArray(inventory)) {
-    return "Invalid argument";
+    return [];
   }
 
   const years = [];
@@ -92,4 +92,23 @@ export function getCarYearsOldersThan2000(years) {
     }
   }
   return olderCarYears;
+}
+
+// ==== Problem #6 ====
+// A buyer is interested in seeing only BMW and Audi cars within the inventory.  Execute a function and return an array that only contains BMW and Audi cars.  Once you have the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
+
+export function getBMWAndAudiCars(inventory) {
+  if (!inventory || !Array.isArray(inventory)) {
+    return [];
+  }
+
+  const BMWAndAudi = [];
+  const regex = /(bmw)|(audi)/i;
+  for (let index = 0; index < inventory.length; index++) {
+    const car = inventory[index];
+    if (regex.test(car.car_make)) {
+      BMWAndAudi.push(car);
+    }
+  }
+  return BMWAndAudi;
 }

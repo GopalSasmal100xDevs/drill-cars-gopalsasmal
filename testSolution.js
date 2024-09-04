@@ -5,6 +5,7 @@ import {
   sortCarsByModel,
   getAllCarYears,
   getCarYearsOldersThan2000,
+  getBMWAndAudiCars,
 } from "./solution.js";
 
 // # Problem 1
@@ -51,3 +52,12 @@ console.log(ans);
 // console.log(getCarYearsOldersThan2000(["Hi"]));
 // console.log(getCarYearsOldersThan2000([1990]));
 // console.log(getCarYearsOldersThan2000([undefined, null]));
+
+// # Problem 6
+const BMWAndAudiCars = getBMWAndAudiCars(inventory);
+console.log(JSON.stringify(BMWAndAudiCars));
+
+// console.log(JSON.stringify(getBMWAndAudiCars()));
+// console.log(JSON.stringify(getBMWAndAudiCars([])));
+// console.log(JSON.stringify(getBMWAndAudiCars([{ car_make: "aUDi" }])));
+// console.log(JSON.stringify(getBMWAndAudiCars([{}, {}])));
